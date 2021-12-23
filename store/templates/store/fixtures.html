@@ -1,0 +1,16 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+{% for fixture in fixtures %}
+     <div style="text-align: center;">
+          <h4>{{fixture.competition}}</h4>
+          
+          <div style="text-align: center; background-color: darkgrey;">
+               <h2>{{fixture.home}} vs {{fixture.away}}</h2>
+          </div>
+               Venue: {{fixture.venue}} &nbsp; &nbsp;Date:{{fixture.date}} &nbsp; &nbsp; Kick Off:{{fixture.time}}
+     </div>
+     <hr>
+{% endfor %}
+{% endblock content %}
